@@ -1,1 +1,77 @@
 Annona - AnglularJS
+COmments in the book
+
+1
+ng-app
+  a directive, a concept
+  - does the Bootstrapping of the AngularJS.
+  - allows you to annotate 
+  any existing HTML element with the tag
+  AngularJS, you can only 
+  work on, control, and modify 
+  that particular section of the HTML,
+  don't process anything outside.
+  AngularJS, handle any element 
+  that is a child of that,
+  and you can annotate them
+  with directives.
+
+
+2
+{{ 1+1 }}
+  an expression
+  one-way data-binding
+  {{}} denotes
+  either one-way data-binding
+  or AngularJS expressions
+
+3
+ng-model
+  a directive
+  used with input-fields
+  for two-way data-binding
+
+4
+ng-model="x"
+  x is the name of the variable
+  that stores the value
+  entered by the user
+  in the input field
+
+5
+ng-bind="x"
+  <span ng-bind="x"></span>
+  is the same as
+  {{ x }}
+  two-way data-binding
+
+6
+module definition
+
+7
+module definition
+  when the module has dependencies
+
+8
+importing a module
+  or "including" a module
+
+9
+The optional argument  
+  which is the name of the module
+  to load during bootstrapping
+
+10
+controller(A,B)
+  A = string
+    name of the controller
+  B = an array
+  retval:
+    ,,,
+
+11
+ng-controller="XxXx"
+  AngularJS, go create an object
+  of class controller
+  and name it XxXx
+  and attach the object to the DOM element
