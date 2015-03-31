@@ -75,3 +75,24 @@ ng-controller="XxXx"
   of class controller
   and name it XxXx
   and attach the object to the DOM element
+
+12
+
+13
+14
+15
+16
+only one data-binding
+
+17
+ng-click="x"
+  a directive that is built into the tag
+  x is an argument (here: a functio)
+
+18
+the function call happens on a click
+
+19
+a proxy variable
+  to avoid referring to the this keyword 
+  incide the controller
