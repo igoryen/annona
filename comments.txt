@@ -44,6 +44,8 @@ ng-bind="x"
   is the same as
   {{ x }}
   two-way data-binding
+  only the double curly braces
+  will not flash on the first page load
 
 6
 module definition
@@ -96,3 +98,34 @@ the function call happens on a click
 a proxy variable
   to avoid referring to the this keyword 
   incide the controller
+
+20
+the controller
+  pure JS
+  no direct access to the view 
+  or any of the DOM elements
+
+21
+an array of JSON objects
+
+22
+using the var 
+  to expose the array on the controller instance
+
+23
+ng-repeat
+  the directive to iterate over an array
+  or over the keys and values of an object
+  and display them in the HTML
+  the same as the foreach() loop
+
+24
+the contents of the element
+  on which the ng-repeat directive is applied
+  this is the template of the ng-repeat directive
+
+25
+using the double-curly notation
+
+26
+ng-bind for 
