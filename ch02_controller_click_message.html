@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="notesApp">
+  <head>
+    <title>Hello - ch 3</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body ng-controller="MainCtrl as ctrl">
+    {{ctrl.helloMsg}} AnguarJS.
+    <br>
+    {{ctrl.goodbyeMsg}} {{ ctrl.bye }} AnglularJS.
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js">
+    </script>
+    <script type="text/javascript">
+          angular.module('notesApp', [])
+            .controller('MainCtrl', 
+          [
+            function () {
+              // controller definition
+              this.helloMsg = 'Hello ';
+              var goodbyeMsg = 'Good ';
+              this.bye = 'Bye ';
+            }
+          ]);
+    </script>
+  </body>
+</html>
