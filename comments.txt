@@ -130,9 +130,10 @@ referring to the variables
 only one data-binding
 
 17
-ng-click="x"
+ng-click="A"
   a directive that is built into the tag
-  x is an argument (here: a functio)
+  A is an argument (here: a function)
+  on click, make a function call
 
 18
 the function call happens on a click
@@ -163,6 +164,8 @@ ng-repeat
   the same as the foreach() loop
   each ng-repeat instance
   gets its own scope
+  caches/reuses DOM elements 
+  if they are exactly the same
 
 24
 the contents of the element
@@ -245,3 +248,13 @@ $first, $middle, $last
 39
 $index
   give the index/position of the item in array/object
+  may not correspond to the order
+  because ng-repeat sorts the items in ASC
+
+40
+track by A
+  to optimize DOM manipulation
+  AngularJS, 
+  reuse the DOM element/object by its ID,
+    e.g. database ID's 
+  don't generate a hash key

@@ -7,15 +7,34 @@
   </head>
   <body ng-controller="MainCtrl as ctrl">
     
-    <div ng-repeat="(author, note) in ctrl.notes">
+    <button ng-click="ctrl.changeNotes()">Change Notes</button>
+    <br>
+    
+    DOM Elements change on every click
+    
+    <div ng-repeat="note in ctrl.notes1">
+      <mark>{{note.$$hashKey}}</mark>
       <span class="label">{{note.label}}</span>
       <span class="author"
-            ng-bind="author"></span>
+            ng-bind="note.done"></span>
     </div>
+    
+    <br>
+    
+    DOM Elements are reused on every click
+    
+    <div ng-repeat="note in ctrl.notes2 track by note.id">
+      <mark>{{note.$$hashKey}}</mark>
+      <span class="label">{{note.label}}</span>
+      <span class="author"
+            ng-bind="note.done"></span>
+    </div>
+    
     
     <script
       src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js">
     </script>
+    
     <script type="text/javascript">
           angular.module('notesApp', [])
             .controller('MainCtrl', 
@@ -23,14 +42,29 @@
             function () {
               // controller definition
               var self = this;
-              self.notes = {
-                shyam: {id:1, label: 'First Note',  done: false },
-                igor:  {id:2, label: 'Second Note', done: false },
-                Misko: {id:3, label: 'Done Note',   done: true },
-                brad:  {id:4, label: 'Last Note',   done: false }
-              };
-            }
-          ]);
+              
+              var notes = [
+                {id:1, label: 'First Note',  done: false, someRandom: 31431},
+                {id:2, label: 'Second Note',  done: false},
+                {id:3, label: 'Finished Third Note',  done: false}
+              ]; // notes
+              
+              self.notes1 = angular.copy(notes);
+              self.notes2 = angular.copy(notes);
+              
+              self.changeNotes = function(){
+                notes = [
+                  {id:1, label: 'Changed Note',  done: false, someRandom: 4242},
+                  {id:2, label: 'Second Note',  done: false},
+                  {id:3, label: 'Finished Third Note',  done: false}
+                ]; // notes
+                
+                self.notes1 = angular.copy(notes);
+                self.notes2 = angular.copy(notes);
+                
+              }; // changeNotes()
+            } // function
+          ]); // controller
     </script>
   </body>
 </html>
