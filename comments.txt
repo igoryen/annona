@@ -232,3 +232,16 @@ ng-repeat="(blah, thing) in ctrl.things"
 37
 class="blah" ng-bind="blah"
   blah should appear in these 2 places also
+
+38
+$first, $middle, $last
+  Boolean values
+  tells you whether 
+  - the array element or
+  - object property
+  is in the beginning/end/middle 
+  of the array/object
+
+39
+$index
+  give the index/position of the item in array/object
