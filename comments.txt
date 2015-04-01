@@ -15,6 +15,27 @@ ng-app
   that is a child of that,
   and you can annotate them
   with directives.
+  Order:
+  1) DOM ready event 
+    (after the entire document has been loaded))
+  2) AngularJS finds this directive 
+  3) When it finds it
+  4) Find and load the specified module
+    and attaches it to the DOM element
+  5) Look at the children elements
+    find all the directives and bind statements
+  6) each time AngularJS hits 
+    ng-controller or 
+    ng-repeat
+    create a scope in AngularJS
+  7) add watchers and listeneres
+    on the vars that the HTML accesses
+    and keeps track of the current value
+    for each of them in order to update the value
+    each time it changes
+
+  8) 
+
 
 
 2
@@ -76,13 +97,35 @@ ng-controller="XxXx"
   AngularJS, go create an object
   of class controller
   and name it XxXx
-  and attach the object to the DOM element
+  and attach the object to the DOM element.
+  The instance of the controller
+  is now associated with the DOM element
 
 12
+A variable declaration on the controller instance.
+  using the this keyword
+  so that user can see this variable
+  or the HTML can use this variable
 
 13
+a local inner variable 
+  in the controller's instance
+  using the var keyword.
+  It is not directly accessible from the HTML
+  and cannot be accessed and displayed
+  to the user via the HTML.
+  So it is only for backend.
+
 14
+as
+  an example of the ControllerAs syntax
+  giving each instance of the controller
+  an alias
+
 15
+referring to the variables 
+  inside the controller instance
+
 16
 only one data-binding
 
@@ -118,6 +161,8 @@ ng-repeat
   or over the keys and values of an object
   and display them in the HTML
   the same as the foreach() loop
+  each ng-repeat instance
+  gets its own scope
 
 24
 the contents of the element
@@ -129,3 +174,7 @@ using the double-curly notation
 
 26
 ng-bind for 
+
+27
+angular.js file
+  should be loaded a the very end of the HTML
