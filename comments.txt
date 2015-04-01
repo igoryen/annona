@@ -258,3 +258,11 @@ track by A
   reuse the DOM element/object by its ID,
     e.g. database ID's 
   don't generate a hash key
+
+41
+ng-repeat-start
+  the first of the multiple sibling elements
+
+42
+ng-repeat-end
+  the last of the multiple sibling elements

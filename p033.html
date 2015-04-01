@@ -7,15 +7,19 @@
   </head>
   <body ng-controller="MainCtrl as ctrl">
     
-    <div ng-repeat="(author, note) in ctrl.notes">
-      <span class="label">{{note.label}}</span>
-      <span class="author"
-            ng-bind="author"></span>
-    </div>
+    <table>
+      <tr ng-repeat-start="note in ctrl.notes">
+        <td>{{note.label}}</td>
+      </tr>
+      <tr ng-repeat-end>
+        <td>{{note.done}}</td>
+      </tr>
+    </table>
     
     <script
       src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js">
     </script>
+    
     <script type="text/javascript">
           angular.module('notesApp', [])
             .controller('MainCtrl', 
@@ -23,13 +27,13 @@
             function () {
               // controller definition
               var self = this;
-              self.notes = {
-                shyam: {id:1, label: 'First Note',  done: false },
-                igor:  {id:2, label: 'Second Note', done: false },
-                Misko: {id:3, label: 'Done Note',   done: true },
-                brad:  {id:4, label: 'Last Note',   done: false }
-              };
-            }
+              self.notes = [
+                {id:1, label: 'First Note',  done: false },
+                {id:2, label: 'Second Note', done: false },
+                {id:3, label: 'Done Note 3',   done: true },
+                {id:4, label: 'Last Note',   done: false }
+              ]; // notes
+            }// function
           ]);
     </script>
   </body>
