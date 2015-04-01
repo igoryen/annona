@@ -60,10 +60,10 @@ ng-model="x"
   in the input field
 
 5
-ng-bind="x"
-  <span ng-bind="x"></span>
+ng-bind="A"
+  <span ng-bind="A"></span>
   is the same as
-  {{ x }}
+  {{ A }}
   two-way data-binding
   only the double curly braces
   will not flash on the first page load
@@ -178,3 +178,42 @@ ng-bind for
 27
 angular.js file
   should be loaded a the very end of the HTML
+
+28
+ng-show="A"
+  A = a variable on the controller
+  show the <span> with .assignee
+  if note.assignee = TRUE/non empty/nonzero/nonnull
+
+29
+ng-class="A"
+  to selectively apply and remove
+  CSS classes from elements
+  A = a string or an object
+    if a string, apply the CSS classes directly
+    if an object apply/remove the CSS class on truthy props
+
+30
+.done
+  CSS class "done"
+
+31
+done: status 
+  apply the CSS class "done" 
+  to the whole DOM element 
+  if the property "done" on object "note" is TRUE
+  i.e. done: true
+
+32
+pending: !status
+  remove the CSS class "pending"
+  from the DOM element
+  if the property "done" on object "note" is FALSE
+  i.e. done: false
+
+33
+pass the property "done" on object "note"
+
+34
+status
+  the status of truthiness
