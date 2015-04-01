@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body ng-controller="MainCtrl as ctrl">
-    <div ng-repeat="note in ctrl.notes">
+    
+    <div ng-repeat="(bla, note) in ctrl.notes">
       <span class="label">{{note.label}}</span>
-      <span class="status"
-            ng-bind="note.done"></span>
+      <span class="bla"
+            ng-bind="bla"></span>
     </div>
     
     <script
@@ -22,12 +23,12 @@
             function () {
               // controller definition
               var self = this;
-              self.notes = [
-                {id:1, label: 'First Note',  done: false },
-                {id:2, label: 'Second Note', done: false },
-                {id:3, label: 'Done Note',   done: true },
-                {id:4, label: 'Last Note',   done: false },
-              ]
+              self.notes = {
+                shyam: {id:1, label: 'First Note',  done: false },
+                igor:  {id:2, label: 'Second Note', done: false },
+                Misko: {id:3, label: 'Done Note',   done: true },
+                brad:  {id:4, label: 'Last Note',   done: false }
+              };
             }
           ]);
     </script>

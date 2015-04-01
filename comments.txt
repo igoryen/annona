@@ -217,3 +217,18 @@ pass the property "done" on object "note"
 34
 status
   the status of truthiness
+
+35
+display property "label" on object "note"
+
+36
+ng-repeat="(blah, thing) in ctrl.things"
+  the fact that "blah" stands first in the list
+  makes it refer to the string "shyam", "Misko" etc?
+  blah would be an object
+  ng-repeat="" sorts the object properties
+  when displaying them
+
+37
+class="blah" ng-bind="blah"
+  blah should appear in these 2 places also
