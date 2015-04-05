@@ -1,5 +1,5 @@
 angular.module('notesApp',[])
-  .controller('ListCtrl', [function(){
+  .controller('ListController', [function(){
 
     var self = this;
     // 1

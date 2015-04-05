@@ -1,5 +1,5 @@
 // Karma configuration
-// Generated on Sun Apr 05 2015 14:41:21 GMT-0400 (Eastern Daylight Time)
+// Generated on Sun Apr 05 2015 15:18:44 GMT-0400 (Eastern Daylight Time)
 
 module.exports = function(config) {
   config.set({
@@ -19,8 +19,12 @@ module.exports = function(config) {
 
 
     // list of files to exclude
+    //exclude: [],
     exclude: [
+      'app/lib/angular/angular-scenario.js'
+      //, '**/angular-scenario.js'  
     ],
+
 
 
     // preprocess matching files before serving them to the browser
@@ -56,9 +60,9 @@ module.exports = function(config) {
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     browsers: ['Chrome'],
 
-
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false
+    singleRun: false,
+
   });
 };
